@@ -20,3 +20,5 @@ In the same Dockerfile, you then need to copy over the ZoKrates executable as we
 ```
 
 From then, you can import and use zokrates.js as any other standard Node library.
+
+<!-- Quickstart, support for node version and zokrates -->
