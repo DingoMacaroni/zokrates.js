@@ -4,8 +4,12 @@ FROM zokrates/zokrates:0.4.11 as builder
 FROM node:12
 RUN mkdir /app
 WORKDIR /app
-COPY ./package.json ./
+
 COPY --from=builder /home/zokrates/zokrates /app/zokrates
 COPY --from=builder /home/zokrates/.zokrates* /app/stdlib
-RUN npm install
+
+COPY package.json ./
+COPY package-lock.json ./
+
+RUN npm ci
 RUN npm install jest --g

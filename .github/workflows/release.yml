@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+      - beta
+      - alpha
 
 jobs:
   release:
@@ -12,21 +14,22 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@master
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 14.x
           registry-url: http://registry.npmjs.org/
+      
+      - name: Install dependencies
+        run: npm ci
 
-      - name: validate before release
+      - name: Release
         run: |
-          npm install --no-save
-          npm run lint
-
-      - name: semantic release
-        uses: codfish/semantic-release-action@v1.2.1
-        id: semantic
+         echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+         npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
