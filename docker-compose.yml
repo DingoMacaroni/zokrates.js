@@ -10,6 +10,3 @@ services:
       - ./lib:/app/lib:delegated
       - ./zok:/app/zok:delegated
     command: tail -F /dev/null
-
-  ganache:
-    image: trufflesuite/ganache-cli
