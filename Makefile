@@ -1,3 +1,5 @@
+# Make sure to run `npm start` before
+
 compile-test:
 	docker-compose exec library jest compile
 

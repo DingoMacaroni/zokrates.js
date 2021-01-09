@@ -10,6 +10,8 @@
   ],
   "scripts": {
     "test": "docker-compose run library jest --runInBand",
+    "start": "docker-compose up -d library",
+    "stop": "docker-compose down",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
