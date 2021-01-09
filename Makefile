@@ -4,7 +4,7 @@ compile-test:
 	docker-compose exec library jest compile
 
 setup-test:
-	docker-compose exec library jest setup-test
+	docker-compose exec library jest setup
 
 exportverifier-test:
 	docker-compose exec library jest export-verifier
