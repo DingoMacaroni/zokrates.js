@@ -1,5 +1,5 @@
 {
-  "name": "zokrates.js",
+  "name": "@dingomacaroni/zokrates.js",
   "description": "This is a Node.js wrapper around ZoKrates.",
   "license": "PUBLIC DOMAIN",
   "version": "0.0.0-semantically-released",
