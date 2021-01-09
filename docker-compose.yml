@@ -8,8 +8,5 @@ services:
     restart: on-failure
     volumes:
       - ./lib:/app/lib:delegated
-      - ./code:/app/code:delegated
+      - ./zok:/app/zok:delegated
     command: tail -F /dev/null
-
-  ganache:
-    image: trufflesuite/ganache-cli

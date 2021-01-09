@@ -1,15 +1,16 @@
+# Make sure to run `npm start` before
+
 compile-test:
-	# docker-compose exec library node ./lib/__tests__/compile
 	docker-compose exec library jest compile
 
-setup-test:docker
+setup-test:
 	docker-compose exec library jest setup-test
 
-export-verifier-test: 
+exportverifier-test:
 	docker-compose exec library jest export-verifier
 
-compute-witness-test:
+computewitness-test:
 	docker-compose exec library jest compute-witness
 
-generate-proof-test:
+generateproof-test:
 	docker-compose exec library jest generate-proof
