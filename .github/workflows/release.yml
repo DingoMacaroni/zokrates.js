@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate TypeScript declaration files (*.d.ts files)
+        run: npm run generate:declaration-file
+
       - name: Release
         run: |
          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
