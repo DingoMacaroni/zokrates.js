@@ -1,3 +1,10 @@
+# [1.3.0-alpha.3](https://github.com/DingoMacaroni/zokrates.js/compare/v1.3.0-alpha.2...v1.3.0-alpha.3) (2021-01-10)
+
+
+### Features
+
+* implement scripts for generating d.ts files ([8475474](https://github.com/DingoMacaroni/zokrates.js/commit/8475474e69f883afa1c73b3bc5640b85b0021485))
+
 # [1.3.0-alpha.2](https://github.com/DingoMacaroni/zokrates.js/compare/v1.3.0-alpha.1...v1.3.0-alpha.2) (2021-01-09)
 
 
